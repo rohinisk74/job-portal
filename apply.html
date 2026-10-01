@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply for Job</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      font-family: Arial, sans-serif;
+    }
+    .apply-form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      width: 350px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .apply-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .apply-form input, .apply-form textarea, .apply-form button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+    .apply-form button {
+      background: #2575fc;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .apply-form button:hover {
+      background: #6a11cb;
+    }
+  </style>
+</head>
+<body>
+  <form class="apply-form" action="thankyou.html" method="get">
+  <h2>Apply for this Job</h2>
+  <input type="text" placeholder="Full Name" required>
+  <input type="email" placeholder="Email" required>
+  <input type="text" placeholder="Phone Number" required>
+  <input type="text" placeholder="LinkedIn Profile">
+  <textarea rows="4" placeholder="Why should we hire you?" required></textarea>
+  <input type="file" accept=".pdf,.doc,.docx">
+  <button type="submit">Submit Application</button>
+</form>
+</body>
+</html>

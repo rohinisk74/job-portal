@@ -1,0 +1,285 @@
+/* ===== Theme ===== */
+:root {
+  --grad-1: #ff4e50;  /* vibrant pink-red */
+  --grad-2: #ff9800;  /* orange */
+}
+
+/* ===== Global Body Style ===== */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+/* Full page background image */
+body {
+  background: url("../images/thankyou-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  /* Text defaults */
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ===== Dark Overlay for Readability ===== */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: -1;
+}
+
+/* ===== Gradient Navbar & Footer ===== */
+.bg-gradient {
+  background: linear-gradient(90deg, var(--grad-1), var(--grad-2));
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+}
+section, .hero {
+  background: transparent;
+}
+
+/* ===== Ready Section (with overlay) ===== */
+.ready-section {
+  position: relative;
+  background-size: cover;
+  text-align: center;
+  padding: 80px 20px;
+  color: white;
+}
+
+.ready-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+}
+
+.ready-section h2 {
+  position: relative;
+  font-size: 2.5rem;
+  background: linear-gradient(45deg, var(--grad-1), var(--grad-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+/* ===== Badges ===== */
+.badge.bg-pink {
+  background: #ff69b4;
+}
+
+/* ===== Job Cards ===== */
+.job-card {
+  border: 0;
+  transition: transform .3s ease, box-shadow .3s ease;
+  border-radius: 1rem;
+  background: #fff;
+  color: #333;
+}
+
+.job-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, .2);
+}
+
+/* ===== Sticky search on Jobs page ===== */
+.sticky-search {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  border-bottom: 1px solid rgba(0, 0, 0, .05);
+}
+
+/* ===== Auth Card ===== */
+.auth-card {
+  max-width: 480px;
+}
+
+/* ===== Animations ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+}
+.reveal.show {
+  opacity: 1;
+  transform: none;
+  transition: all .8s ease;
+}
+.delay-1 { transition-delay: .15s !important; }
+.delay-2 { transition-delay: .3s !important; }
+.animate-slide { animation: slideIn 1s ease-out both; }
+.animate-fade { animation: fadeIn 1.6s ease both; }
+.animate-bounce { animation: bounce 2s infinite; }
+
+@keyframes slideIn {
+  from { transform: translateY(-40px); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* ===== Buttons ===== */
+.btn {
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(45deg, var(--grad-1), var(--grad-2));
+  color: white !important;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(45deg, var(--grad-2), var(--grad-1));
+  transform: scale(1.05);
+  box-shadow: 0 10px 24px rgba(0,0,0,.2);
+}
+
+/* ===== Forms ===== */
+.form-container {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  margin: 50px auto;
+  color: #333;
+}
+
+.form-step { display: none; animation: fadeIn 0.5s; }
+.form-step.active { display: block; }
+
+.success-message {
+  text-align: center;
+  font-size: 18px;
+  color: green;
+  font-weight: bold;
+}
+
+/* ===== Job Detail Page ===== */
+.job-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  color: #333;
+}
+
+.apply-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(45deg, var(--grad-1), var(--grad-2));
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.apply-btn:hover {
+  background: linear-gradient(45deg, var(--grad-2), var(--grad-1));
+}
+
+/* ===== Headings ===== */
+h2 {
+  margin-bottom: 10px;
+  color: #ffeb3b; /* bright yellow for visibility */
+}
+.details p {
+  margin: 8px 0;
+  color: #555;
+}
+/* Align only form labels (like Full Name, Email, etc.) to the left */
+form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+/* ===== Fix alignment issue on Job Details page ===== */
+.card-body {
+  text-align: left;   /* reset alignment */
+}
+.card-body p, 
+.card-body ul, 
+.card-body li {
+  color: #333;        /* readable text inside white card */
+}
+
+/* ===== Footer ===== */
+.footer {
+  background: #111;
+  color: #eee;
+  padding: 50px 0;
+}
+.footer .container {
+  max-width: 1100px;
+  margin: auto;
+}
+.footer .row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  text-align: center;
+}
+.footer-col { flex: 1; min-width: 250px; }
+.footer-col h4 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+.footer-col ul { list-style: none; padding: 0; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul li a {
+  color: #bbb;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.footer-col ul li a:hover { color: var(--grad-2); }
+
+/* ===== Social Icons ===== */
+.footer .social-links a {
+  display: inline-block;
+  height: 40px; width: 40px;
+  background: #fff;
+  margin: 0 8px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #333;
+  transition: 0.3s;
+}
+.footer .social-links a:hover {
+  color: #fff;
+  background: linear-gradient(45deg, var(--grad-1), var(--grad-2));
+}

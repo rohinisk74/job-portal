@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Portal | Thank You</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Background Image Style */
+    body {
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Center section */
+.thankyou-message {
+  flex: 1;  /* takes remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* vertical center */
+  align-items: center;      /* horizontal center */
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+  margin-bottom: 60px; /* gap before footer */
+}
+
+.thankyou-message h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.thankyou-message p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.thankyou-message a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #0d6efd;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="index.html">
+        <i class="bi bi-briefcase-fill"></i> JobPortal
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="jobs.html">Jobs</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <a href="register.html" class="btn btn-warning ms-3">Register</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Thank You Message -->
+  <div class="thankyou-message">
+    <h1>Applied Successfully</h1>
+    <p>We have received your application. Our team will get back to you soon.</p>
+    <a href="index.html">Back to Home</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <!-- About -->
+        <div class="col-md-4 footer-col">
+          <h4>JobPortal</h4>
+          <p>Your trusted platform to connect talented job seekers with top employers. Making hiring simpler, faster,
+            and transparent.</p>
+        </div>
+        <!-- Quick Links -->
+        <div class="col-md-4 footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Find Jobs</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Social -->
+        <div class="col-md-4 footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

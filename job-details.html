@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Details - JobPortal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR START ===== -->
+  <header class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="index.html">
+        <i class="bi bi-briefcase-fill"></i> JobPortal
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="jobs.html">Jobs</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <a href="register.html" class="btn btn-warning ms-3">Register</a>
+      </div>
+    </div>
+  </header>
+  <!-- ===== NAVBAR END ===== -->
+
+  <!-- ===== JOB DETAILS ===== -->
+  <div class="container my-5">
+    <div id="job-details" class="card shadow-sm border-0 p-4">
+      <!-- Job details will load here -->
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer bg-light py-4">
+    <div class="container text-center">
+      <p>© 2025 JobPortal. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Jobs Data (should match jobs.html IDs)
+    const jobs = [
+      { id: 1, title: "Software Engineer", company: "Tech Solutions", location: "Chennai", description: "Develop and maintain software applications using modern technologies." },
+      { id: 2, title: "Web Developer", company: "Creative Minds", location: "Bangalore", description: "Design and build responsive websites and web apps." },
+      { id: 3, title: "Data Analyst", company: "DataCorp", location: "Hyderabad", description: "Analyze data and provide business insights to stakeholders." },
+      { id: 4, title: "UI/UX Designer", company: "Pixel Studio", location: "Pune", description: "Design user-friendly and visually appealing interfaces." },
+      { id: 5, title: "DevOps Engineer", company: "Cloudify", location: "Delhi", description: "Automate deployment pipelines and manage cloud infrastructure." },
+      { id: 6, title: "Backend Developer", company: "CodeWorks", location: "Mumbai", description: "Build and optimize server-side logic and databases." },
+      { id: 7, title: "Frontend Developer", company: "WebFlow", location: "Noida", description: "Implement UI components with HTML, CSS, and JavaScript." },
+      { id: 8, title: "AI Engineer", company: "AI Vision", location: "Hyderabad", description: "Develop AI and machine learning models for real-world applications." },
+      { id: 9, title: "Business Analyst", company: "Insight Corp", location: "Chennai", description: "Bridge the gap between IT and business with data-driven insights." },
+      { id: 10, title: "QA Tester", company: "TestLabs", location: "Bangalore", description: "Test software applications for bugs and quality assurance." },
+      { id: 11, title: "Mobile App Developer", company: "AppGen", location: "Pune", description: "Develop Android and iOS mobile applications." },
+      { id: 12, title: "Cyber Security Analyst", company: "SecureTech", location: "Delhi", description: "Ensure security of IT systems and protect against cyber threats." },
+      { id: 13, title: "Cloud Engineer", company: "SkyNet", location: "Mumbai", description: "Deploy and manage cloud environments and services." },
+      { id: 14, title: "Product Manager", company: "BuildIt", location: "Chennai", description: "Define product vision and work with teams to deliver solutions." },
+      { id: 15, title: "Database Administrator", company: "DataSafe", location: "Hyderabad", description: "Maintain and optimize enterprise-level databases." },
+      { id: 16, title: "Network Engineer", company: "ConnectIT", location: "Noida", description: "Design and manage network infrastructure and security." },
+      { id: 17, title: "Full Stack Developer", company: "StackHub", location: "Bangalore", description: "Work across frontend and backend to build complete web apps." },
+      { id: 18, title: "Machine Learning Engineer", company: "DeepThink", location: "Pune", description: "Design ML algorithms and implement predictive systems." },
+      { id: 19, title: "Game Developer", company: "PlayHouse", location: "Mumbai", description: "Develop interactive games for desktop and mobile platforms." },
+      { id: 20, title: "System Administrator", company: "InfraCore", location: "Delhi", description: "Manage and troubleshoot IT systems and infrastructure." }
+    ];
+
+    // Get jobId from URL
+    const params = new URLSearchParams(window.location.search);
+    const jobId = parseInt(params.get("jobId"));
+
+    // Find job by ID
+    const job = jobs.find(j => j.id === jobId);
+
+    // Display job details
+    const jobDetailsDiv = document.getElementById("job-details");
+    if (job) {
+      jobDetailsDiv.innerHTML = `
+        <h2>${job.title}</h2>
+        <p><strong>Company:</strong> ${job.company}</p>
+        <p><strong>Location:</strong> ${job.location}</p>
+        <p><strong>Description:</strong> ${job.description}</p>
+        <a href="apply.html?jobId=${job.id}" class="btn btn-success mt-3">Apply Now</a>
+        <a href="jobs.html" class="btn btn-secondary mt-3 ms-2">Back to Jobs</a>
+      `;
+    } else {
+      jobDetailsDiv.innerHTML = `<p class="text-danger">Job not found!</p>`;
+    }
+  </script>
+
+</body>
+</html>

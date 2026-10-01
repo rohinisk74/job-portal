@@ -1,0 +1,153 @@
+job-portal-frontend/
+│── index.html        (Home Page)
+│── login.html        (Login Page)
+│── register.html     (Register Page)
+│── jobs.html         (Jobs Listing)
+│── job.html          (Job Details)
+│── post-job.html     (Employer Post Job)
+│── assets/
+    ├── css/style.css (Custom styles)
+    └── js/app.js     (Dummy interactivity)
+
+const jobs = [
+      { id: 1, title: "Software Engineer", company: "Tech Solutions", location: "Chennai" },
+      { id: 2, title: "Web Developer", company: "Creative Minds", location: "Bangalore" },
+      { id: 3, title: "Data Analyst", company: "DataCorp", location: "Hyderabad" },
+      { id: 4, title: "UI/UX Designer", company: "Pixel Studio", location: "Pune" },
+      { id: 5, title: "DevOps Engineer", company: "Cloudify", location: "Delhi" },
+      { id: 6, title: "Backend Developer", company: "CodeWorks", location: "Mumbai" },
+      { id: 7, title: "Frontend Developer", company: "WebFlow", location: "Noida" },
+      { id: 8, title: "AI Engineer", company: "AI Vision", location: "Hyderabad" },
+      { id: 9, title: "Business Analyst", company: "Insight Corp", location: "Chennai" },
+      { id: 10, title: "QA Tester", company: "TestLabs", location: "Bangalore" },
+      { id: 11, title: "Mobile App Developer", company: "AppGen", location: "Pune" },
+      { id: 12, title: "Cyber Security Analyst", company: "SecureTech", location: "Delhi" },
+      { id: 13, title: "Cloud Engineer", company: "SkyNet", location: "Mumbai" },
+      { id: 14, title: "Product Manager", company: "BuildIt", location: "Chennai" },
+      { id: 15, title: "Database Administrator", company: "DataSafe", location: "Hyderabad" },
+      { id: 16, title: "Network Engineer", company: "ConnectIT", location: "Noida" },
+      { id: 17, title: "Full Stack Developer", company: "StackHub", location: "Bangalore" },
+      { id: 18, title: "Machine Learning Engineer", company: "DeepThink", location: "Pune" },
+      { id: 19, title: "Game Developer", company: "PlayHouse", location: "Mumbai" },
+      { id: 20, title: "System Administrator", company: "InfraCore", location: "Delhi" }
+    ];
+
+
+
+
+const jobs = [
+      { id: 1, title: "Software Engineer", company: "Tech Solutions", location: "Chennai", description: "Develop and maintain software applications using modern technologies." },
+      { id: 2, title: "Web Developer", company: "Creative Minds", location: "Bangalore", description: "Design and build responsive websites and web apps." },
+      { id: 3, title: "Data Analyst", company: "DataCorp", location: "Hyderabad", description: "Analyze data and provide business insights to stakeholders." },
+      { id: 4, title: "UI/UX Designer", company: "Pixel Studio", location: "Pune", description: "Design user-friendly and visually appealing interfaces." },
+      { id: 5, title: "DevOps Engineer", company: "Cloudify", location: "Delhi", description: "Automate deployment pipelines and manage cloud infrastructure." },
+      { id: 6, title: "Backend Developer", company: "CodeWorks", location: "Mumbai", description: "Build and optimize server-side logic and databases." },
+      { id: 7, title: "Frontend Developer", company: "WebFlow", location: "Noida", description: "Implement UI components with HTML, CSS, and JavaScript." },
+      { id: 8, title: "AI Engineer", company: "AI Vision", location: "Hyderabad", description: "Develop AI and machine learning models for real-world applications." },
+      { id: 9, title: "Business Analyst", company: "Insight Corp", location: "Chennai", description: "Bridge the gap between IT and business with data-driven insights." },
+      { id: 10, title: "QA Tester", company: "TestLabs", location: "Bangalore", description: "Test software applications for bugs and quality assurance." },
+      { id: 11, title: "Mobile App Developer", company: "AppGen", location: "Pune", description: "Develop Android and iOS mobile applications." },
+      { id: 12, title: "Cyber Security Analyst", company: "SecureTech", location: "Delhi", description: "Ensure security of IT systems and protect against cyber threats." },
+      { id: 13, title: "Cloud Engineer", company: "SkyNet", location: "Mumbai", description: "Deploy and manage cloud environments and services." },
+      { id: 14, title: "Product Manager", company: "BuildIt", location: "Chennai", description: "Define product vision and work with teams to deliver solutions." },
+      { id: 15, title: "Database Administrator", company: "DataSafe", location: "Hyderabad", description: "Maintain and optimize enterprise-level databases." },
+      { id: 16, title: "Network Engineer", company: "ConnectIT", location: "Noida", description: "Design and manage network infrastructure and security." },
+      { id: 17, title: "Full Stack Developer", company: "StackHub", location: "Bangalore", description: "Work across frontend and backend to build complete web apps." },
+      { id: 18, title: "Machine Learning Engineer", company: "DeepThink", location: "Pune", description: "Design ML algorithms and implement predictive systems." },
+      { id: 19, title: "Game Developer", company: "PlayHouse", location: "Mumbai", description: "Develop interactive games for desktop and mobile platforms." },
+      { id: 20, title: "System Administrator", company: "InfraCore", location: "Delhi", description: "Manage and troubleshoot IT systems and infrastructure." }
+    ];
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Portal | About Us</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <!-- ====== NAVBAR START ====== -->
+  <header class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand fw-bold text-primary" href="index.html">
+        <i class="bi bi-briefcase-fill"></i> JobPortal
+      </a>
+
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="jobs.html">Jobs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <!-- Register Button -->
+        <a href="register.html" class="btn btn-warning ms-3">Register</a>
+      </div>
+    </div>
+  </header>
+  <!-- ====== NAVBAR END ====== -->
+
+  <h1>Applied Succesfully</h1>
+  <p>We have received your application. Our team will get back to you soon.</p>
+  <a href="index.html">Back to Home</a>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+
+        <!-- Column 1: About -->
+        <div class="footer-col">
+          <h4>JobPortal</h4>
+          <p>Your trusted platform to connect talented job seekers with top employers. Making hiring simpler, faster,
+            and transparent.</p>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Find Jobs</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Follow Us -->
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+</body>
+</html>. This my thankyou.html code with that output i want a background image with proper alignment.

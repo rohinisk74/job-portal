@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Portal | Home</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+
+  <!-- ====== NAVBAR START ====== -->
+  <header class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand fw-bold text-primary" href="index.html">
+        <i class="bi bi-briefcase-fill"></i> JobPortal
+      </a>
+
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="jobs.html">Jobs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <!-- Register Button -->
+        <a href="register.html" class="btn btn-warning ms-3">Register</a>
+      </div>
+    </div>
+  </header>
+  <!-- ====== NAVBAR END ====== -->
+
+
+  <!-- Hero -->
+  <section class="hero d-flex flex-column justify-content-center align-items-center text-center">
+    <h1 class="display-4 fw-bold animate-slide reveal">Find Your Dream Job Today</h1>
+    <p class="lead animate-fade reveal delay-1">Discover thousands of opportunities tailored for you.</p>
+    <a href="jobs.html" class="btn btn-warning btn-lg animate-bounce mt-3 reveal delay-2">Explore Jobs</a>
+  </section>
+
+  <!-- Featured Jobs -->
+  <section class="container py-5">
+    <h2 class="text-center mb-4 animate-slide reveal">Featured Jobs</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card job-card shadow reveal">
+          <div class="card-body">
+            <span class="badge bg-primary mb-2">IT / Software</span>
+            <h5 class="card-title">Frontend Developer</h5>
+            <p class="text-muted mb-2">Company: BrightApps • Location: Chennai</p>
+            <p>Build responsive UIs with React, Bootstrap, and modern JS.</p>
+            <a href="job.html" class="btn btn-outline-primary">View Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card job-card shadow reveal delay-1">
+          <div class="card-body">
+            <span class="badge bg-success mb-2">Marketing</span>
+            <h5 class="card-title">Digital Marketer</h5>
+            <p class="text-muted mb-2">Company: MarketGenius • Location: Remote</p>
+            <p>SEO, ads, and analytics for fast-growing brands.</p>
+            <a href="job.html" class="btn btn-outline-primary">View Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card job-card shadow reveal delay-2">
+          <div class="card-body">
+            <span class="badge bg-info mb-2">Data</span>
+            <h5 class="card-title">Data Analyst</h5>
+            <p class="text-muted mb-2">Company: Insightly • Location: Bangalore</p>
+            <p>Turn data into decisions with SQL, Python, and dashboards.</p>
+            <a href="job.html" class="btn btn-outline-primary">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="ready-section text-center py-5">
+  <h2>Ready to start your career journey?</h2>
+  <a href="register.html" class="btn btn-success">Register Now</a>
+</section>
+
+  <!--FOOTER-->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+
+        <!-- Column 1: About -->
+        <div class="footer-col">
+          <h4>JobPortal</h4>
+          <p>Your trusted platform to connect talented job seekers with top employers. Making hiring simpler, faster,
+            and transparent.</p>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Find Jobs</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Follow Us -->
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>

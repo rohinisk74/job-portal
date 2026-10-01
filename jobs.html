@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jobs - JobPortal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR START ===== -->
+  <header class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="index.html">
+        <i class="bi bi-briefcase-fill"></i> JobPortal
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link active" href="jobs.html">Jobs</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <a href="register.html" class="btn btn-warning ms-3">Register</a>
+      </div>
+    </div>
+  </header>
+  <!-- ===== NAVBAR END ===== -->
+
+  <!-- ===== JOB LISTINGS ===== -->
+  <div class="container my-5">
+    <h2 class="mb-4 text-center">Available Jobs</h2>
+    <div class="row" id="jobs-list"></div>
+  </div>
+
+  <script>
+    // Jobs Data (same IDs as job-details.html)
+    const jobs = [
+      { id: 1, title: "Software Engineer", company: "Tech Solutions", location: "Chennai" },
+      { id: 2, title: "Web Developer", company: "Creative Minds", location: "Bangalore" },
+      { id: 3, title: "Data Analyst", company: "DataCorp", location: "Hyderabad" },
+      { id: 4, title: "UI/UX Designer", company: "Pixel Studio", location: "Pune" },
+      { id: 5, title: "DevOps Engineer", company: "Cloudify", location: "Delhi" },
+      { id: 6, title: "Backend Developer", company: "CodeWorks", location: "Mumbai" },
+      { id: 7, title: "Frontend Developer", company: "WebFlow", location: "Noida" },
+      { id: 8, title: "AI Engineer", company: "AI Vision", location: "Hyderabad" },
+      { id: 9, title: "Business Analyst", company: "Insight Corp", location: "Chennai" },
+      { id: 10, title: "QA Tester", company: "TestLabs", location: "Bangalore" },
+      { id: 11, title: "Mobile App Developer", company: "AppGen", location: "Pune" },
+      { id: 12, title: "Cyber Security Analyst", company: "SecureTech", location: "Delhi" },
+      { id: 13, title: "Cloud Engineer", company: "SkyNet", location: "Mumbai" },
+      { id: 14, title: "Product Manager", company: "BuildIt", location: "Chennai" },
+      { id: 15, title: "Database Administrator", company: "DataSafe", location: "Hyderabad" },
+      { id: 16, title: "Network Engineer", company: "ConnectIT", location: "Noida" },
+      { id: 17, title: "Full Stack Developer", company: "StackHub", location: "Bangalore" },
+      { id: 18, title: "Machine Learning Engineer", company: "DeepThink", location: "Pune" },
+      { id: 19, title: "Game Developer", company: "PlayHouse", location: "Mumbai" },
+      { id: 20, title: "System Administrator", company: "InfraCore", location: "Delhi" }
+    ];
+
+    // Render jobs
+    const jobsList = document.getElementById("jobs-list");
+    jobs.forEach(job => {
+      jobsList.innerHTML += `
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">${job.title}</h5>
+              <p class="card-text"><strong>Company:</strong> ${job.company}</p>
+              <p class="card-text"><strong>Location:</strong> ${job.location}</p>
+              <a href="job-details.html?jobId=${job.id}" class="btn btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>
